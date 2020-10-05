@@ -9,7 +9,8 @@ const App = () => {
   const { jobs, loading, error } = useFetchJobs(params, page);
 
   return (
-    <Container>
+    <Container className='my-4'>
+      <h1>GitHub Jobs</h1>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
       {jobs.map(job => {
